@@ -265,6 +265,104 @@ p {
   transform: translateY(-1px);
 }
 
+/* GROTE QUIZKNOP OP HOME */
+.big-quiz-button {
+  display: block;
+  max-width: 320px;
+  margin: 24px auto 0;
+  text-align: center;
+  padding: 14px 26px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* QUIZ EXTRA STIJL (voor vinkjes enz, als je die gebruikt) */
+.quiz-item {
+  margin-bottom: 16px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.05);
+  background: rgba(255,255,255,0.8);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.quiz-item p {
+  margin-bottom: 6px;
+  grid-column: 1 / -1;
+}
+
+.quiz-input {
+  padding: 6px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.18);
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.quiz-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  margin-left: 6px;
+}
+
+.quiz-item.correct {
+  border-color: #5fad41;
+  background: #e7f7e4;
+}
+
+.quiz-item.incorrect {
+  border-color: #d9534f;
+  background: #fce5e5;
+}
+
+.quiz-item.correct .quiz-icon {
+  border-color: #5fad41;
+  color: #5fad41;
+}
+
+.quiz-item.correct .quiz-icon::before {
+  content: "✔";
+}
+
+.quiz-item.incorrect .quiz-icon {
+  border-color: #d9534f;
+  color: #d9534f;
+}
+
+.quiz-item.incorrect .quiz-icon::before {
+  content: "✘";
+}
+
+.check-button {
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.result-message {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-align: center;
+  background: #e7f7e4;
+  border: 1px solid #5fad41;
+  color: #356b27;
+  display: none;
+}
+
+.result-message.visible {
+  display: block;
+}
+
 footer {
   font-size: 0.8rem;
   text-align: center;
